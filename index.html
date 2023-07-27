@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i2224019 - 小林鈴生のポートフォリオ</title>
+  <style>
+
+
+
+
+    /* 共通スタイル */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('path/to/your/illustration.jpg');
+      /* イラストレーションの画像へのパスを指定 */
+      background-size: cover;
+      /* 画像をウィンドウに合わせて拡大縮小 */
+      background-repeat: no-repeat;
+      /* 画像の繰り返しをしない */
+      background-position: center center;
+      /* 画像を中央に配置 */
+    }
+
+    header {
+      background-color: #45ceb5;
+      text-align: center;
+      padding: 40px 0;
+
+      
+
+    }
+
+    h1 {
+      margin: 0;
+      font-weight: 700;
+      font-family: 'Caveat', cursive, 'Rampart One', cursive;
+      /* CaveatフォントとRampart Oneフォントを適用 */
+      color: #ffffff;
+      font-size: 36px;
+    }
+
+    main {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .project {
+      border: 3px solid #ffb6c1;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      /* アニメーション追加 */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project img {
+      max-width: 100%;
+      height: auto;
+      /* 高さを自動調整して、画像が中央に配置されるようにする */
+      border-radius: 10px;
+    }
+
+    .project h2 {
+      margin-top: 10px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .description {
+      margin-top: 10px;
+      font-family: 'Montserrat', sans-serif;
+      /* フォントを適用 */
+      font-weight: 400;
+      /* フォントのスタイルを指定 */
+      color: #000;
+      /* 説明ボックス内の文字を通常の黒色に設定 */
+    }
+
+    /* ボタンスタイル */
+    .footer-buttons {
+      display: flex;
+      justify-content: center;
+      /* ボタンを中央に配置 */
+      gap: 10px;
+      /* ボタン間の間隔 */
+      margin-top: 20px;
+    }
+
+    .footer-button {
+      background-color: #45ceb5;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      /* カーソルをポインターに変更 */
+      transition: background-color 0.3s ease;
+      /* ボタンにアニメーションを追加 */
+      width: 100%;
+      max-width: 300px;
+      /* ボタンの最大幅を設定 */
+      text-align: center;
+    }
+
+    /* ボタンホバーエフェクト */
+    .footer-button:hover {
+      background-color: #30a196;
+    }
+
+    /* ボックスの追加アニメーション */
+    .project {
+      transform: translateY(50px);
+      /* 初期位置を下に50pxスライドさせる */
+      opacity: 0;
+      /* 最初は非表示 */
+    }
+
+    /* ボックスの表示アニメーション */
+    .project.animate {
+      transform: translateY(0);
+      opacity: 1;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+
+    
+    /* フルスクリーン時のスタイル */
+    @media (max-width: 1000px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      .project:nth-child(odd) {
+        order: 1;
+      }
+
+      .project:nth-child(even) {
+        order: 2;
+      }
+    }
+
+    /* スマートフォン用のスタイル */
+    @media (max-width: 600px) {
+      header {
+        padding: 20px 0;
+      }
+
+      .project h2 {
+        font-size: 20px;
+      }
+
+      .footer-button {
+        max-width: 200px;
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <!-- Google Fontsのフォントを読み込むリンクを追加 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Rampart+One&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <a href="project.html" style="text-decoration: none; color: inherit;">
+
+    <h1>２２２４０１９ 小林鈴生</h1>
+    <h1>作品紹介</h1>
+    </a>
+  </header>
+
+  <main>
+
+    <script>
+      // ページがロードされたときに実行する処理
+      document.addEventListener("DOMContentLoaded", function() {
+        // .project 要素を取得
+        const projects = document.querySelectorAll(".project");
+    
+        // .project 要素が画面内に表示されたときに実行する処理
+        function handleIntersection(entries) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // 画面内に表示されたら animate クラスを追加
+              entry.target.classList.add("animate");
+            }
+          });
+        }
+    
+        // Intersection Observer を使用して .project 要素が画面内に表示されたときに handleIntersection を実行する
+        const observer = new IntersectionObserver(handleIntersection, {
+          rootMargin: "0px",
+          threshold: 0.3 // 画面内に30%以上表示されたらアニメーションを実行
+        });
+    
+        // 各 .project 要素を監視対象に追加
+        projects.forEach(project => {
+          observer.observe(project);
+        });
+      });
+    </script>
+
+    <a href="project1.html" class="project animate">
+      <img src="slime.jpg" alt="作品1の写真">
+      <h2>作品1</h2>
+      <div class="description">
+        CG演習
+      </div>
+    </a>
+
+    <a href="project2.html" class="project animate">
+      <img src="int2.jpg" alt="作品2の写真">
+      <h2>作品2</h2>
+      <div class="description">
+        インタラクション1
+      </div>
+    </a>
+
+    <a href="project3.html" class="project animate">
+      <img src="int.jpg" alt="作品3の写真">
+      <h2>作品3</h2>
+      <div class="description">
+        インタラクション2
+      </div>
+    </a>
+
+    <a href="project4.html" class="project animate">
+      <img src="tpu.jpg" alt="作品4の写真">
+      <h2>作品4</h2>
+      <div class="description">
+        movie
+      </div>
+    </a>
+
+    <a href="project5.html" class="project animate">
+      <img src="rogo3.png" alt="作品5の写真">
+      <h2>作品5</h2>
+      <div class="description">
+        DESIGN
+      </div>
+    </a>
+
+    <a href="project6.html" class="project animate">
+      <img src="figma1_1.jpg" alt="作品6の写真">
+      <h2>作品6</h2>
+      <div class="description">
+        figma
+      </div>
+    </a>
+
+  </main>
+  <footer>
+    <!-- 作品へのリンクボタンを横並びで表示 -->
+    <div class="footer-buttons">
+      <a href="project1.html" class="footer-button">作品1</a>
+      <a href="project2.html" class="footer-button">作品2</a>
+      <a href="project3.html" class="footer-button">作品3</a>
+      <a href="project4.html" class="footer-button">作品4</a>
+      <a href="project5.html" class="footer-button">作品5</a>
+      <a href="project6.html" class="footer-button">作品6</a>
+    </div>
+  </footer>
+</body>
+
+</html>
