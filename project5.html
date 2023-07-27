@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>i2224019</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=DotGothic16&family=Rampart+One&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+
+        }
+
+        /* イントロダクションのテキストスタイル */
+        #intro {
+            font-family: "Caveat", cursive;
+            /* "Caveat"フォントを適用 */
+            background-image: url("ir.jpg");
+            /* ... (省略) ... */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        header nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        /* イントロダクションのスタイル */
+        #intro {
+            background-image: url("ir.jpg");
+            /* イラストレーションの画像を背景に設定 */
+            background-size: cover;
+            /* 画像を自動的にサイズ調整してコンテナにフィットさせる */
+            background-repeat: no-repeat;
+            /* 画像のリピートを無効にする */
+            background-position: center;
+            /* 画像を中央に配置 */
+            color: #000000;
+            /* イントロダクションのテキストの色を白に設定 */
+            text-align: center;
+            /* テキストを中央揃え */
+            padding: 100px 0;
+            /* イントロダクションの上下の余白を追加 */
+        }
+
+        /* イントロダクションのテキストスタイル */
+        #intro h1 {
+            font-family: "Caveat", cursive;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        #intro p {
+            font-size: 18px;
+        }
+
+        main {
+            display: flex;
+            /* フレックスコンテナを使って横並びに配置 */
+            justify-content: center;
+            /* フレックスアイテムを中央に配置 */
+            flex-wrap: wrap;
+            /* フレックスアイテムを折り返して複数行に表示 */
+        }
+
+        main div {
+            flex: 0 0 calc(20% - 40px);
+            /* フレックスアイテムの幅を均等に計算し、間隔を調整 */
+            margin: 20px;
+            /* フレックスアイテムの間隔 */
+        }
+
+        /* 作品紹介のスタイル */
+        footer {
+            background-color: #d1faaf;
+            color: #000000;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer h2 {
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer li {
+            margin-bottom: 5px;
+        }
+
+        /* 修正部分 */
+        main div img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+        }
+
+        /* フッターリンクのスタイル */
+        footer a {
+            color: #333;
+            text-decoration: none;
+            font-size: 30px;
+            /* リンクのテキストサイズを変更 */
+            font-weight: bold;
+            /* リンクのテキストを太字にする */
+            display: block;
+            /* リンクをブロックレベル要素にする */
+            margin-top: 10px;
+            /* リンクの上部マージンを追加 */
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">ロゴ</a></li>
+                <li><a href="#about">説明</a></li>
+                <!-- 追加のメニューアイテムをここに追加 -->
+                <li><a href="index.html">ホーム</a></li>
+            </ul>
+        </nav>
+        </nav>
+    </header>
+
+    <!-- イントロダクション -->
+    <section id="intro">
+        <h1>ロゴのデザイン</h1>
+
+    </section>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <div>
+            <h2>作品1</h2>
+            <img src="rogo1.jpeg" alt="写真1">
+        </div>
+
+        <div>
+            <h2>作品2</h2>
+            <img src="rogo2.png" alt="写真2">
+        </div>
+
+        <div>
+            <h2>作品3</h2>
+            <img src="rogo3.png" alt="写真3">
+        </div>
+
+        <div>
+            <h2>作品4</h2>
+            <img src="rogo4.jpg" alt="写真4">
+        </div>
+
+        <div>
+            <h2>作品5</h2>
+            <img src="rogo5.jpg" alt="写真5">
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+
+
+        <center>イラストを描くのは得ではないが、文字のレタリングが得意なので、友人のチームや大会で知り合った人のチームのロゴを作ったり、手伝ったりした作品
+        </center>
+    </footer>
+</body>
+
+</html>

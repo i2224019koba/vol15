@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i2224019</title>
+    <style>
+        /* 全体のスタイル */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ヘッダーのスタイル */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        header nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* メインコンテンツのスタイル */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .video {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 315px;
+        }
+
+        /* 説明文のスタイル */
+        .video p {
+            margin-top: 10px;
+        }
+
+        /* フッターのスタイル */
+        footer {
+            background-color: #d1faaf;
+            color: #000000;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* 作品紹介のスタイル */
+        .photos {
+            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .photos-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .photos img {
+            width: 400px;
+            height: 250px;
+        }
+
+        .photo-description {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">ロゴ</a></li>
+                <li><a href="#about">説明</a></li>
+                <li><a href="index.html">ホーム</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- スライムの動画 -->
+        <section id="home" class="video">
+            <h1>スライム</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/iwTnra3qYh8"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <p>CG基礎演習で制作したスライムがはねる動画</p>
+            <p>使用したソフト: Blender</p>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <section id="about" class="photos">
+            <h2>作品紹介</h2>
+            <div class="photos-row">
+                <!-- 写真と説明文 -->
+                <div>
+                    <img src="cg1.jpg" alt="写真1">
+                    <p class="photo-description">初めてBlenderを触った</p>
+                </div>
+                <div>
+                    <img src="cg2.jpg" alt="写真2">
+                    <p class="photo-description">形を変えていって、アニメーションをつける</p>
+                </div>
+            </div>
+            <div class="photos-row">
+                <div>
+                    <img src="after.jpg" alt="写真3">
+                    <p class="photo-description">After Effectsでエフェクトを入れて</p>
+                </div>
+                <div>
+                    <img src="pro.jpg" alt="写真4">
+                    <p class="photo-description">Premiere Proで編集して完成</p>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
